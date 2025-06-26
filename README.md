@@ -26,19 +26,19 @@ It allows users to query sections of the [IRS Internal Revenue Manual (IRM 1.1.6
 
 This project follows a Retrieval-Augmented Generation (RAG) architecture:
 
-1. Data Preparation
+1. Data Preparation: 
 IRS.gov documents are crawled, parsed, cleaned, and split into meaningful sections with metadata (e.g., section ID, title, date).
 
-2. Embedding & Indexing
+2. Embedding & Indexing: 
 Each text chunk is converted to vector embeddings using Hugging Face Transformers, and stored in a local ChromaDB vector store.
 
-3. Retrieval
+3. Retrieval: 
 When a user submits a query, its embedding is compared to document vectors to retrieve the most relevant sections.
 
-4. Generation
+4. Generation: 
 The retrieved context, user query, and the instructions are sent to Amazon Titan Text Premier via Bedrock to generate a response with inline citations.
 
-5. Interface
+5. Interface: 
 A Streamlit app provides a chatbot-style UI for querying, viewing answers, and seeing source citations and performance metrics.
 
 <img width="935" alt="Screenshot 2025-06-20 at 7 03 50 PM" src="https://github.com/user-attachments/assets/2b253257-8618-4200-8443-968b0fa7eca5" />
